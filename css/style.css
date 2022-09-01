@@ -142,5 +142,90 @@ main form #login-input {
   background-color: transparent;
   border: none;
   outline: none;
+  
+}
+
+main form:last-of-type {
+  /* main의 form 마지막요소만 */
+  margin-top: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+main form:last-of-type #toDoGuideMsg {
+  font-size: min(42px, 4vw);
+}
+
+main form:last-of-type input {
+  width: 100%;
+  font-size: min(38px, 3.5vw);
+  font-weight: unset;
+  background-color: transparent;
+  border: none;
+  outline: none;
   border-bottom: 3px solid floralwhite;
+}
+
+main #todo-list {
+  width: 100%;
+  margin-top: 30px;
+  max-width: min(525px, 50vw);
+  overflow-y: scroll;
+}
+
+main #todo-list::-webkit-scrollbar {
+  display: none;
+}
+
+main #todo-list li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 9fr 1fr;
+      grid-template-columns: 9fr 1fr;
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  padding: 5px;
+  font-size: min(38px, 3.5vw);
+  word-break: break-all;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+}
+
+main #todo-list li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+main #todo-list li span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main #todo-list li button {
+  margin-left: 5px;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#quote {
+  width: 80%;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  cursor: pointer;
+}
+
+.strikethrough {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
 }

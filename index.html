@@ -23,19 +23,27 @@
     </header>
 
     <main>
-      <form class ="hidden" id="login-form">
-        <input
-          required
-          maxlength="15"
-          type="text"
-          placeholder="What is your name?"
-        />
-        <input id="guid" type="submit" value="Log In" />
-      </form>
       <h2 id="clock">00:00:00</h2>
       <h1 id="greeting" class="hidden"></h1>
+
+      <form class ="hidden" id="login-form">
+        <h2 id="loginGuideMsg">Please write your name</h2>
+        <input
+          id="login-input"
+          maxlength="15"
+          type="text"
+          autofocus required
+        />
+      </form>
+
       <form id ="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required/>
+        <h2 id="toDoGuideMsg">Please write your main task</h2>
+        <input 
+        type="text" 
+        maxlength="15" 
+        autofocus 
+        required
+        />
       </form>
       <ul id="todo-list"></ul>
     </main>
